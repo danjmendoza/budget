@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: sprinter-api
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    image: sprint-client
+    ports:
+      - "3001:80"
